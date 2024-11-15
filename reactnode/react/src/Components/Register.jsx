@@ -24,7 +24,7 @@ export function Register( { onUsernameChange } )
             Cookies.remove("username");
             Cookies.remove("score");
             const data = await response.json();
-            const username = data.username;
+            const username = data.nameuser;
             const score = data.score;
             onUsernameChange(username, score)
             navigate("/logged")

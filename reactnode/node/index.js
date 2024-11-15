@@ -69,8 +69,8 @@ app.post("/register", (req,res) =>{
         .json({ message: 0 });
       }
       const userData = {
-        username: result[0].username,
-        score: result[0].score
+        nameuser: nameuser,
+        score: 0
       };
       let sqlInsert = "INSERT INTO `users`(`id_user`, `username`, `login`, `password`, `score`) VALUES ('',?,?,?,'0')";
       db.query(sqlInsert, [nameuser,login,password], (err,result) =>{
